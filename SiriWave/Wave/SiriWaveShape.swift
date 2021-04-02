@@ -22,7 +22,8 @@ struct SiriWaveShape: Shape {
     // MARK: - Function
     // MARK: Public
     func path(in rect: CGRect) -> Path {
-        let heightRatios: [CGFloat] = [1, 0.862, 0.396, 0, 0.396, 0.862, 1]
+//        let heightRatios: [CGFloat] = [1, 0.862, 0.396, 0, 0.396, 0.862, 1]
+        let heightRatios: [CGFloat] = [1, 0.94, 0.696, 0.5, 0.696, 0.94, 1]
         
         let offset = scale < 1 ? (rect.size.height - (rect.size.height * scale)) / 2 : 0
         let size   = CGSize(width: rect.size.width, height: rect.size.height * scale)
@@ -31,7 +32,16 @@ struct SiriWaveShape: Shape {
         
         // Top points
         for (i, ratio) in heightRatios.enumerated() {
-            points.append(CGPoint(x: (CGFloat(i) / 6) * size.width, y: ratio * size.height / 2 + offset))
+            var padding: CGFloat {
+                switch i {
+                case 1:     return 65
+                case 2:     return 43
+                case 4:     return -43
+                case 5:     return -65
+                default:    return 0
+                }
+            }
+            points.append(CGPoint(x: (CGFloat(i) / 6) * size.width + padding, y: ratio * size.height / 2 + offset))
         }
         
         // Bottom points
