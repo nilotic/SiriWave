@@ -13,6 +13,7 @@ struct WaveView: View {
     // MARK: Public
     @StateObject var data = WaveData()
     
+    
     // MARK: - View
     // MARK: Public
     var body: some View {
@@ -22,13 +23,15 @@ struct WaveView: View {
                 Color(.clear)
                 
                 // Wave
-                ForEach(data.waves) {
-                    SiriWaveShape(scale: $0.scale)
-                        .fill($0.gradient)
-                        .animation(Animation.easeInOut(duration: 1).repeatForever())
+                ForEach(Array(data.waves.enumerated()), id: \.element) { i, wave in
+                    SiriWaveShape(scale: wave.scale)
+                        .fill(wave.gradient)
+                        .padding(.leading, CGFloat(i - data.waves.count / 2)  * 20)
+                        .animation(Animation.easeInOut(duration: 0.78).delay(Double.random(in: 0...0.3)).repeatForever())
                 }
+                .frame(height: 350)
+                .border(Color.gray)
                 .drawingGroup()
-                
             }
             .onAppear {
                 data.update(size: proxy.size)

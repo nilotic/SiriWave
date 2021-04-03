@@ -22,9 +22,6 @@ struct SiriWaveShape: Shape {
     // MARK: - Function
     // MARK: Public
     func path(in rect: CGRect) -> Path {
-//        let xRatios: [CGFloat] = [0, 0.317, 0.433, 0.5, 0.566, 0.679, 1]
-//        let yRatios: [CGFloat] = [1, 0.94,  0.696, 0,   0.696, 0.94,  1]
-        
         let ratios: [(x: CGFloat, y: CGFloat)] = [(0, 1), (0.317, 0.94), (0.433, 0.696), (0.5, 0), (0.566, 0.696), (0.679, 0.94), (1, 1)]
         
         let offset = scale < 1 ? (rect.size.height - (rect.size.height * scale)) / 2 : 0
