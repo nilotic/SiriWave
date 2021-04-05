@@ -3,7 +3,8 @@ Siri Wave in SwiftUI
 
 <br>
 
-![ezgif com-resize](https://user-images.githubusercontent.com/4756783/113473792-c4abaf80-94a6-11eb-9c67-3e3a643a813e.gif)
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/4756783/113574943-13e51200-9658-11eb-931c-84137d1e3b79.gif)
+
 
 
 <br>
