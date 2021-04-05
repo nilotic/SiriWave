@@ -1,7 +1,7 @@
-//
+// 
 //  WaveData.swift
-//  
-//  Created by Den Jo on 2021/03/30.
+//
+//  Created by Den Jo on 2021/04/05.
 //  Copyright © nilotic. All rights reserved.
 //
 
@@ -11,41 +11,20 @@ final class WaveData: ObservableObject {
     
     // MARK: - Value
     // MARK: Public
-    @Published var waves: [SiriWave]
+    @Published var waves: [Wave]
     
+    let colors = [Color(#colorLiteral(red: 0.6784313725, green: 0.2235294118, blue: 0.2980392157, alpha: 1)), Color(#colorLiteral(red: 0.1882352941, green: 0.862745098, blue: 0.6078431373, alpha: 1)), Color(#colorLiteral(red: 0.09803921569, green: 0.4784313725, blue: 1, alpha: 1))]
+  
     
     // MARK: - Initializer
     init() {
-        var waves = [SiriWave]()
-        for _ in 0..<10 {
-            waves.append(SiriWave())
-        }
-        
-        self.waves = waves
+        waves = colors.map { _ in Wave(power: 0) }
     }
     
     
     // MARK: - Function
-    // MARK Public
-    func update(size: CGSize) {
-        guard size != .zero else {
-            log(.error, "Invalid screen size")
-            return
-        }
-        
-        var gradient: RadialGradient {
-            let color = [Color(#colorLiteral(red: 0.9921568627, green: 0.2784313725, blue: 0.4039215686, alpha: 1)), Color(#colorLiteral(red: 0.368627451, green: 0.9882352941, blue: 0.662745098, alpha: 1)), Color(#colorLiteral(red: 0.1254901961, green: 0.5215686275, blue: 0.9882352941, alpha: 1))].randomElement() ?? .clear
-            return RadialGradient(gradient: Gradient(colors: [color.opacity(0.8), color.opacity(0.1)]), center: .center, startRadius: 0, endRadius: size.width)
-        }
-        
-        for i in 0..<waves.count {
-            waves[i].gradient = gradient
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            for i in 0..<self.waves.count {
-                self.waves[i].scale = CGFloat.random(in: 0...1.0)
-            }
-        }
+    // MARK: Public
+    func update(power: CGFloat) {
+        waves = colors.map { _ in Wave(power: power) }
     }
 }

@@ -7,32 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B798E3262616A90E002B8C2C /* SiriWaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798E3252616A90E002B8C2C /* SiriWaveShape.swift */; };
+		B798E3262616A90E002B8C2C /* SiriWave2Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798E3252616A90E002B8C2C /* SiriWave2Shape.swift */; };
 		B7A6946A26131643004AE108 /* SiriWaveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6946926131643004AE108 /* SiriWaveApp.swift */; };
-		B7A6946C26131643004AE108 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6946B26131643004AE108 /* WaveView.swift */; };
+		B7A6946C26131643004AE108 /* Wave2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6946B26131643004AE108 /* Wave2View.swift */; };
 		B7A6946E26131644004AE108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A6946D26131644004AE108 /* Assets.xcassets */; };
 		B7A6947126131644004AE108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A6947026131644004AE108 /* Preview Assets.xcassets */; };
-		B7A6947E26131BE2004AE108 /* WaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6947D26131BE2004AE108 /* WaveData.swift */; };
-		B7A6948626131CAC004AE108 /* SiriWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948526131CAC004AE108 /* SiriWave.swift */; };
-		B7A6948926131CE7004AE108 /* SiriWavePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948826131CE7004AE108 /* SiriWavePath.swift */; };
+		B7A6947E26131BE2004AE108 /* Wave2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6947D26131BE2004AE108 /* Wave2Data.swift */; };
+		B7A6948626131CAC004AE108 /* SiriWave2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948526131CAC004AE108 /* SiriWave2.swift */; };
+		B7A6948926131CE7004AE108 /* SiriWave2Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948826131CE7004AE108 /* SiriWave2Path.swift */; };
 		B7C705AC261530140035B25D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C705AA261530140035B25D /* Logger.swift */; };
 		B7C705AD261530140035B25D /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C705AB261530140035B25D /* LogType.swift */; };
+		B7C97185261AF3EC0042E22D /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C97184261AF3EC0042E22D /* WaveView.swift */; };
+		B7C97188261AF42A0042E22D /* WaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C97187261AF42A0042E22D /* WaveData.swift */; };
+		B7C9718C261AF48E0042E22D /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C9718B261AF48E0042E22D /* Curve.swift */; };
+		B7C97190261AF5FD0042E22D /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C9718F261AF5FD0042E22D /* Wave.swift */; };
+		B7C971A4261B048C0042E22D /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C971A3261B048C0042E22D /* WaveShape.swift */; };
+		B7C971C0261B37700042E22D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C971BF261B37700042E22D /* HomeView.swift */; };
 		B7E85B98261401DB00F31B73 /* CubicCurveControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B798E3252616A90E002B8C2C /* SiriWaveShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriWaveShape.swift; sourceTree = "<group>"; };
+		B798E3252616A90E002B8C2C /* SiriWave2Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriWave2Shape.swift; sourceTree = "<group>"; };
 		B7A6946626131643004AE108 /* SiriWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A6946926131643004AE108 /* SiriWaveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWaveApp.swift; sourceTree = "<group>"; };
-		B7A6946B26131643004AE108 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		B7A6946B26131643004AE108 /* Wave2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2View.swift; sourceTree = "<group>"; };
 		B7A6946D26131644004AE108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A6947026131644004AE108 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7A6947226131644004AE108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7A6947D26131BE2004AE108 /* WaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveData.swift; sourceTree = "<group>"; };
-		B7A6948526131CAC004AE108 /* SiriWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWave.swift; sourceTree = "<group>"; };
-		B7A6948826131CE7004AE108 /* SiriWavePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWavePath.swift; sourceTree = "<group>"; };
+		B7A6947D26131BE2004AE108 /* Wave2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2Data.swift; sourceTree = "<group>"; };
+		B7A6948526131CAC004AE108 /* SiriWave2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWave2.swift; sourceTree = "<group>"; };
+		B7A6948826131CE7004AE108 /* SiriWave2Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWave2Path.swift; sourceTree = "<group>"; };
 		B7C705AA261530140035B25D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B7C705AB261530140035B25D /* LogType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
+		B7C97184261AF3EC0042E22D /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		B7C97187261AF42A0042E22D /* WaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveData.swift; sourceTree = "<group>"; };
+		B7C9718B261AF48E0042E22D /* Curve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
+		B7C9718F261AF5FD0042E22D /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		B7C971A3261B048C0042E22D /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
+		B7C971BF261B37700042E22D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicCurveControls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +62,7 @@
 		B726E0312617027A00C58BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B798E3252616A90E002B8C2C /* SiriWaveShape.swift */,
+				B798E3252616A90E002B8C2C /* SiriWave2Shape.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -75,7 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				B7A6946926131643004AE108 /* SiriWaveApp.swift */,
-				B7A6947B26131BD1004AE108 /* Wave */,
+				B7C971BE261B37600042E22D /* Home */,
+				B7C97180261AF3840042E22D /* Wave */,
+				B7A6947B26131BD1004AE108 /* Wave2 */,
 				B7C705A8261530050035B25D /* Util */,
 				B7A6946D26131644004AE108 /* Assets.xcassets */,
 				B7A6947226131644004AE108 /* Info.plist */,
@@ -92,22 +106,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B7A6947B26131BD1004AE108 /* Wave */ = {
+		B7A6947B26131BD1004AE108 /* Wave2 */ = {
 			isa = PBXGroup;
 			children = (
-				B7A6946B26131643004AE108 /* WaveView.swift */,
-				B7A6947D26131BE2004AE108 /* WaveData.swift */,
+				B7A6946B26131643004AE108 /* Wave2View.swift */,
+				B7A6947D26131BE2004AE108 /* Wave2Data.swift */,
 				B726E0312617027A00C58BBF /* View */,
 				B7A6947C26131BD7004AE108 /* Model */,
 			);
-			path = Wave;
+			path = Wave2;
 			sourceTree = "<group>";
 		};
 		B7A6947C26131BD7004AE108 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B7A6948526131CAC004AE108 /* SiriWave.swift */,
-				B7A6948826131CE7004AE108 /* SiriWavePath.swift */,
+				B7A6948526131CAC004AE108 /* SiriWave2.swift */,
+				B7A6948826131CE7004AE108 /* SiriWave2Path.swift */,
 				B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */,
 			);
 			name = Model;
@@ -128,6 +142,42 @@
 				B7C705AB261530140035B25D /* LogType.swift */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		B7C97180261AF3840042E22D /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				B7C97184261AF3EC0042E22D /* WaveView.swift */,
+				B7C97187261AF42A0042E22D /* WaveData.swift */,
+				B7C971A2261B047B0042E22D /* View */,
+				B7C9718A261AF4760042E22D /* Model */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
+		B7C9718A261AF4760042E22D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7C9718F261AF5FD0042E22D /* Wave.swift */,
+				B7C9718B261AF48E0042E22D /* Curve.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7C971A2261B047B0042E22D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7C971A3261B048C0042E22D /* WaveShape.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7C971BE261B37600042E22D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B7C971BF261B37700042E22D /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +249,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A6948926131CE7004AE108 /* SiriWavePath.swift in Sources */,
-				B7A6947E26131BE2004AE108 /* WaveData.swift in Sources */,
-				B7A6946C26131643004AE108 /* WaveView.swift in Sources */,
-				B7A6948626131CAC004AE108 /* SiriWave.swift in Sources */,
-				B798E3262616A90E002B8C2C /* SiriWaveShape.swift in Sources */,
+				B7A6948926131CE7004AE108 /* SiriWave2Path.swift in Sources */,
+				B7C97185261AF3EC0042E22D /* WaveView.swift in Sources */,
+				B7A6947E26131BE2004AE108 /* Wave2Data.swift in Sources */,
+				B7C971C0261B37700042E22D /* HomeView.swift in Sources */,
+				B7A6946C26131643004AE108 /* Wave2View.swift in Sources */,
+				B7A6948626131CAC004AE108 /* SiriWave2.swift in Sources */,
+				B7C97188261AF42A0042E22D /* WaveData.swift in Sources */,
+				B7C971A4261B048C0042E22D /* WaveShape.swift in Sources */,
+				B798E3262616A90E002B8C2C /* SiriWave2Shape.swift in Sources */,
+				B7C9718C261AF48E0042E22D /* Curve.swift in Sources */,
 				B7C705AD261530140035B25D /* LogType.swift in Sources */,
+				B7C97190261AF5FD0042E22D /* Wave.swift in Sources */,
 				B7C705AC261530140035B25D /* Logger.swift in Sources */,
 				B7E85B98261401DB00F31B73 /* CubicCurveControls.swift in Sources */,
 				B7A6946A26131643004AE108 /* SiriWaveApp.swift in Sources */,

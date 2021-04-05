@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SiriWaveApp: App {
+    
+    // MARK: - Scene
     var body: some Scene {
         WindowGroup {
-            WaveView()
+            HomeView()
         }
     }
 }

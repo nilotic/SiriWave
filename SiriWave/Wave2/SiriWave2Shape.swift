@@ -1,5 +1,5 @@
 // 
-//  SiriWaveShape.swift
+//  SiriWave2Shape.swift
 //
 //  Created by Den Jo on 2021/04/02.
 //  Copyright © nilotic. All rights reserved.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SiriWaveShape: Shape {
+struct SiriWave2Shape: Shape {
     
     // MARK: - Value
     // MARK: Public

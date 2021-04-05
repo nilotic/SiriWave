@@ -1,7 +1,7 @@
-//
+// 
 //  WaveView.swift
 //
-//  Created by Den Jo on 2021/03/30.
+//  Created by Den Jo on 2021/04/05.
 //  Copyright © nilotic. All rights reserved.
 //
 
@@ -11,31 +11,30 @@ struct WaveView: View {
     
     // MARK: - Value
     // MARK: Public
-    @StateObject var data = WaveData()
+    @ObservedObject var data = WaveData()
+    @Binding var power: CGFloat
+    
+    
+    // MARK: - Initiazlier
+    init(data: Binding<CGFloat>) {
+        _power = data
+    }
     
     
     // MARK: - View
     // MARK: Public
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                // Background
-                Color(.clear)
-                
-                // Wave
-                ForEach(Array(data.waves.enumerated()), id: \.element) { i, wave in
-                    SiriWaveShape(scale: wave.scale)
-                        .fill(wave.gradient)
-                        .padding(.leading, CGFloat(i - data.waves.count / 2)  * 20)
-                        .animation(Animation.easeInOut(duration: 0.78).delay(Double.random(in: 0...0.3)).repeatForever())
-                }
-                .frame(height: 350)
-                .border(Color.gray)
-                .drawingGroup()
+        ZStack {
+            ForEach(Array(data.colors.enumerated()), id: \.element) { i, color in
+                WaveShape(wave: data.waves[i])
+                    .fill(color)
             }
-            .onAppear {
-                data.update(size: proxy.size)
-            }
+        }
+        .animation(.easeInOut)
+        .blendMode(.lighten)
+        .drawingGroup()
+        .onChange(of: power) {
+            data.update(power: $0)
         }
     }
 }
@@ -44,7 +43,7 @@ struct WaveView: View {
 struct WaveView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let view = WaveView()
+        let view = WaveView(data: .constant(0))
         
         Group {
             view
