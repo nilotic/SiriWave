@@ -39,7 +39,7 @@ struct HomeView: View {
         }
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
-                power = power == 0 ? CGFloat.random(in: 0 ... 1.0) : 0
+                power = power == 0 ? CGFloat.random(in: 0...1.0) : 0
             }
         }
     }
