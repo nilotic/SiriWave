@@ -10,9 +10,9 @@ import SwiftUI
 struct WaveView: View {
     
     // MARK: - Value
-    // MARK: Public
-    @ObservedObject var data = WaveData()
-    @Binding var power: CGFloat
+    // MARK: Private
+    @ObservedObject private var data = WaveData()
+    @Binding private var power: CGFloat
     
     
     // MARK: - Initiazlier
@@ -43,7 +43,7 @@ struct WaveView: View {
 struct WaveView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let view = WaveView(data: .constant(0))
+        let view = WaveView(data: .constant(0.5))
         
         Group {
             view

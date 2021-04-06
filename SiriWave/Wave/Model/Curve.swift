@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Curve {
-    var power: CGFloat
     var amplitude: CGFloat
     var frequency: CGFloat
     var time: CGFloat
@@ -16,9 +15,7 @@ struct Curve {
 
 extension Curve {
     
-    init(power: CGFloat) {
-        self.power = power
-        
+    init() {
         amplitude = CGFloat.random(in: 0.1...1.0)
         frequency = CGFloat.random(in: 0.6...0.9)
         time      = CGFloat.random(in: -1.0...4.0)
@@ -28,6 +25,6 @@ extension Curve {
 extension Curve: Identifiable {
     
     var id: String {
-        "\(power)\(amplitude)\(frequency)\(time)"
+        "\(amplitude)\(frequency)\(time)"
     }
 }

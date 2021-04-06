@@ -32,14 +32,13 @@ struct WaveShape: Shape {
     // MARK: Private
     private func calculate(frame: CGRect) -> [CGPoint] {
         let xPoints = Array(stride(from: -frame.midX, to: frame.midX, by: 1))
-        
         var coordinates = [[CGFloat]](repeating: [0, 0], count: xPoints.count)
         
         for i in 0..<Int.random(in: 2...wave.curves.count) {
             let amplitude = wave.curves[i].amplitude * frame.midY * wave.power
             
             for (j, graphX) in xPoints.enumerated() {
-                let x = graphX / (frame.midX / 9.0)
+                let x = graphX / (frame.midX / 9)
                 let y = attenuate(x: x, amplitude: amplitude, frequency: wave.curves[i].frequency, time: wave.curves[i].time) + frame.midY
                 
                 coordinates[j] = [frame.midX + graphX, max(coordinates[j][1], y)]
@@ -47,7 +46,7 @@ struct WaveShape: Shape {
         }
         
         // Create inverse points
-        coordinates += coordinates.map { [$0[0], (($0[1] - frame.midY) * -1) + frame.midY] }
+        coordinates += coordinates.map { [$0[0], frame.midY - ($0[1] - frame.midY)] }
                 
         var points = [CGPoint]()
         for coordinate in coordinates {
