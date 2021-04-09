@@ -28,3 +28,18 @@ extension Curve: Identifiable {
         "\(amplitude)\(frequency)\(time)"
     }
 }
+
+extension Curve: Animatable {
+    
+    typealias AnimatableData = AnimatablePair<AnimatablePair<CGFloat, CGFloat>, CGFloat>
+    
+    var animatableData: Curve.AnimatableData {
+        get { AnimatablePair(AnimatablePair(amplitude, frequency), time) }
+        
+        set {
+            amplitude = newValue.first.first
+            frequency = newValue.first.second
+            time      = newValue.second
+        }
+    }
+}

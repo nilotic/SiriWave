@@ -30,30 +30,15 @@ extension Wave: Identifiable {
 extension Wave: Animatable {
     
     typealias AnimatableData = AnimatablePair<
-                                    AnimatablePair<
-                                        AnimatablePair<AnimatablePair<CGFloat, CGFloat>, CGFloat>,
-                                        AnimatablePair<AnimatablePair<CGFloat, CGFloat>, CGFloat>
-                                        >,
-                                    
-                                    AnimatablePair<
-                                        AnimatablePair<AnimatablePair<CGFloat, CGFloat>, CGFloat>,
-                                        AnimatablePair<AnimatablePair<CGFloat, CGFloat>, AnimatablePair<CGFloat, CGFloat>
-                                        >
-                                    >
-                                >
+        AnimatablePair<Curve.AnimatableData, Curve.AnimatableData>,
+        AnimatablePair<Curve.AnimatableData, AnimatablePair<Curve.AnimatableData, CGFloat>>
+    >
     
     var animatableData: AnimatableData {
         get {
             AnimatablePair(
-                AnimatablePair(
-                    AnimatablePair(AnimatablePair(curves[0].amplitude, curves[0].frequency), curves[0].time),
-                    AnimatablePair(AnimatablePair(curves[1].amplitude, curves[1].frequency), curves[1].time)
-                ),
-                
-                AnimatablePair(
-                    AnimatablePair(AnimatablePair(curves[2].amplitude, curves[2].frequency), curves[2].time),
-                    AnimatablePair(AnimatablePair(curves[3].amplitude, curves[3].frequency), AnimatablePair(curves[3].time, power))
-                )
+                AnimatablePair(curves[0].animatableData, curves[1].animatableData),
+                AnimatablePair(curves[2].animatableData, AnimatablePair(curves[3].animatableData, power))
             )
         }
         
@@ -73,12 +58,12 @@ extension Wave: Animatable {
             curves[2].frequency = curve3.first.second
             curves[2].time      = curve3.second
             
-            let curve4 = newValue.second.second
+            let curve4 = newValue.second.second.first
             curves[3].amplitude = curve4.first.first
             curves[3].frequency = curve4.first.second
-            curves[3].time      = curve4.second.first
+            curves[3].time      = curve4.second
             
-            power = curve4.second.second
+            power = newValue.second.second.second
         }
     }
 }
