@@ -24,6 +24,8 @@
 		B7C97190261AF5FD0042E22D /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C9718F261AF5FD0042E22D /* Wave.swift */; };
 		B7C971A4261B048C0042E22D /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C971A3261B048C0042E22D /* WaveShape.swift */; };
 		B7C971C0261B37700042E22D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C971BF261B37700042E22D /* HomeView.swift */; };
+		B7DD42D2262589CC00C55CFA /* Wave3Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD42D1262589CC00C55CFA /* Wave3Shape.swift */; };
+		B7DD42D5262589F700C55CFA /* Wave3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD42D4262589F700C55CFA /* Wave3.swift */; };
 		B7E85B98261401DB00F31B73 /* CubicCurveControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		B7C9718F261AF5FD0042E22D /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		B7C971A3261B048C0042E22D /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
 		B7C971BF261B37700042E22D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B7DD42D1262589CC00C55CFA /* Wave3Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave3Shape.swift; sourceTree = "<group>"; };
+		B7DD42D4262589F700C55CFA /* Wave3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave3.swift; sourceTree = "<group>"; };
 		B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicCurveControls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				B7C103DD2625625300169893 /* Wave3View.swift */,
+				B7DD42D0262589BE00C55CFA /* View */,
+				B7DD42CF262589AF00C55CFA /* Model */,
 			);
 			path = Wave3;
 			sourceTree = "<group>";
@@ -189,6 +195,22 @@
 				B7C971BF261B37700042E22D /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B7DD42CF262589AF00C55CFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7DD42D4262589F700C55CFA /* Wave3.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7DD42D0262589BE00C55CFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7DD42D1262589CC00C55CFA /* Wave3Shape.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +288,14 @@
 				B7C971C0261B37700042E22D /* HomeView.swift in Sources */,
 				B7A6946C26131643004AE108 /* Wave2View.swift in Sources */,
 				B7A6948626131CAC004AE108 /* SiriWave2.swift in Sources */,
+				B7DD42D5262589F700C55CFA /* Wave3.swift in Sources */,
 				B7C97188261AF42A0042E22D /* WaveData.swift in Sources */,
 				B7C971A4261B048C0042E22D /* WaveShape.swift in Sources */,
 				B798E3262616A90E002B8C2C /* SiriWave2Shape.swift in Sources */,
 				B7C9718C261AF48E0042E22D /* Curve.swift in Sources */,
 				B7C705AD261530140035B25D /* LogType.swift in Sources */,
 				B7C103DE2625625300169893 /* Wave3View.swift in Sources */,
+				B7DD42D2262589CC00C55CFA /* Wave3Shape.swift in Sources */,
 				B7C97190261AF5FD0042E22D /* Wave.swift in Sources */,
 				B7C705AC261530140035B25D /* Logger.swift in Sources */,
 				B7E85B98261401DB00F31B73 /* CubicCurveControls.swift in Sources */,
