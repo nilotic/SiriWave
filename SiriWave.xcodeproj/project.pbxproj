@@ -15,6 +15,7 @@
 		B7A6947E26131BE2004AE108 /* Wave2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6947D26131BE2004AE108 /* Wave2Data.swift */; };
 		B7A6948626131CAC004AE108 /* SiriWave2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948526131CAC004AE108 /* SiriWave2.swift */; };
 		B7A6948926131CE7004AE108 /* SiriWave2Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6948826131CE7004AE108 /* SiriWave2Path.swift */; };
+		B7C103DE2625625300169893 /* Wave3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C103DD2625625300169893 /* Wave3View.swift */; };
 		B7C705AC261530140035B25D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C705AA261530140035B25D /* Logger.swift */; };
 		B7C705AD261530140035B25D /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C705AB261530140035B25D /* LogType.swift */; };
 		B7C97185261AF3EC0042E22D /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C97184261AF3EC0042E22D /* WaveView.swift */; };
@@ -37,6 +38,7 @@
 		B7A6947D26131BE2004AE108 /* Wave2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2Data.swift; sourceTree = "<group>"; };
 		B7A6948526131CAC004AE108 /* SiriWave2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWave2.swift; sourceTree = "<group>"; };
 		B7A6948826131CE7004AE108 /* SiriWave2Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWave2Path.swift; sourceTree = "<group>"; };
+		B7C103DD2625625300169893 /* Wave3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave3View.swift; sourceTree = "<group>"; };
 		B7C705AA261530140035B25D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B7C705AB261530140035B25D /* LogType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
 		B7C97184261AF3EC0042E22D /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				B7C971BE261B37600042E22D /* Home */,
 				B7C97180261AF3840042E22D /* Wave */,
 				B7A6947B26131BD1004AE108 /* Wave2 */,
+				B7C103DC2625623800169893 /* Wave3 */,
 				B7C705A8261530050035B25D /* Util */,
 				B7A6946D26131644004AE108 /* Assets.xcassets */,
 				B7A6947226131644004AE108 /* Info.plist */,
@@ -125,6 +128,14 @@
 				B7E85B97261401DB00F31B73 /* CubicCurveControls.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B7C103DC2625623800169893 /* Wave3 */ = {
+			isa = PBXGroup;
+			children = (
+				B7C103DD2625625300169893 /* Wave3View.swift */,
+			);
+			path = Wave3;
 			sourceTree = "<group>";
 		};
 		B7C705A8261530050035B25D /* Util */ = {
@@ -260,6 +271,7 @@
 				B798E3262616A90E002B8C2C /* SiriWave2Shape.swift in Sources */,
 				B7C9718C261AF48E0042E22D /* Curve.swift in Sources */,
 				B7C705AD261530140035B25D /* LogType.swift in Sources */,
+				B7C103DE2625625300169893 /* Wave3View.swift in Sources */,
 				B7C97190261AF5FD0042E22D /* Wave.swift in Sources */,
 				B7C705AC261530140035B25D /* Logger.swift in Sources */,
 				B7E85B98261401DB00F31B73 /* CubicCurveControls.swift in Sources */,

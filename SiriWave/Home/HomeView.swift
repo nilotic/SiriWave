@@ -36,6 +36,17 @@ struct HomeView: View {
             Wave2View()
                 .frame(height: 100)
                 .border(Color.gray)
+            
+            
+            Spacer()
+                .frame(height: 150)
+            
+            
+            // Wave 3
+            Text("Wave 3")
+                
+            Wave3View()
+                .border(Color.gray)
         }
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
