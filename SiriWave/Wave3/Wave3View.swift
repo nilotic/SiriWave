@@ -25,10 +25,10 @@ struct Wave3View: View {
             .animation(.easeInOut)
             .drawingGroup()
             .onAppear {
-                Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                Timer.scheduledTimer(withTimeInterval: 0.38, repeats: true) { timer in
                     withAnimation {
                         amplitude = amplitude == -1 ? 1 : -1
-                        frequency += 0.1
+                        frequency = min(5, 0.1 + frequency)
                     }
                 }
             }

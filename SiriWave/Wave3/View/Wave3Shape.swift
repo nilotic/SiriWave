@@ -5,8 +5,6 @@
 //  Copyright © nilotic. All rights reserved.
 //
 
-// https://stackoverflow.com/questions/42282793/drawing-the-waveform-effect-of-siri/66981902?noredirect=1#comment118401621_66981902
-
 import SwiftUI
 
 struct Wave3Shape: Shape {

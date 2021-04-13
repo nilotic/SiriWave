@@ -17,36 +17,43 @@ struct HomeView: View {
     // MARK: - View
     // MARK: Public
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             // Wave 1
-            Text("Wave 1")
-            
-            WaveView(data: $power)
-                .frame(height: 100)
-                .border(Color.gray)
+            Group {
+                Text("Wave 1")
                 
-            
-            Spacer()
-                .frame(height: 150)
-            
+                WaveView(data: $power)
+                    .frame(height: 100)
+                    .border(Color.gray)
+            }
+                
             
             // Wave 2
-            Text("Wave 2")
-                
-            Wave2View()
-                .frame(height: 100)
-                .border(Color.gray)
-            
-            
-            Spacer()
-                .frame(height: 150)
-            
+            Group {
+                Text("Wave 2")
+                    
+                Wave2View()
+                    .frame(height: 100)
+                    .border(Color.gray)
+            }
             
             // Wave 3
-            Text("Wave 3")
+            Group {
+                Text("Wave 3")
+                    
+                Wave3View()
+                    .frame(height: 100)
+                    .border(Color.gray)
+            }
+            
+            // Wave 4
+            Group {
+                Text("Wave 4")
                 
-            Wave3View()
-                .border(Color.gray)
+                Wave4View()
+                    .frame(height: 100)
+                    .border(Color.gray)
+            }
         }
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
