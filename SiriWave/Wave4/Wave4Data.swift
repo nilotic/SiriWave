@@ -22,18 +22,29 @@ final class Wave4Data: ObservableObject {
     
     private var phase: CGFloat      = 0
     private let phaseShift: CGFloat = -0.15
-    private var timer: Timer? = nil
+    
+    private var waveTimer: Timer?  = nil
+    private var powerTimer: Timer? = nil
+    private var powers = [CGFloat]()
     
     
     // MARK: - Function
     // MARK: Public
     func update() {
-        timer?.invalidate()
+        waveTimer?.invalidate()
+        powerTimer?.invalidate()
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.018, repeats: true) { timer in
+        waveTimer = Timer.scheduledTimer(withTimeInterval: 0.015, repeats: true) { timer in
             self.phase += self.phaseShift
-            self.amplitude = min(1, self.amplitude + 0.003)
-        
+            
+            if let first = self.powers.first {
+                self.amplitude = self.amplitude < first ? self.amplitude + 0.03 : self.amplitude - 0.03
+                
+                if abs(self.amplitude - first) < 0.1 {
+                    self.powers.removeFirst()
+                }
+            }
+            
             var waves = [Wave4]()
             for i in 0..<self.count {
                 let wave = Wave4(index: i, count: self.count, primaryLineWidth: self.primaryLineWidth, amplitude: self.amplitude, frequency: self.frequency, density: self.density, phase: self.phase)
@@ -41,6 +52,10 @@ final class Wave4Data: ObservableObject {
             }
             
             self.waves = waves
+        }
+        
+        powerTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+            self.powers.append(CGFloat.random(in: 0...1.5))
         }
     }
 }

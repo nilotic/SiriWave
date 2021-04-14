@@ -17,9 +17,9 @@ struct HomeView: View {
     // MARK: - View
     // MARK: Public
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 50) {
             // Wave 1
-            Group {
+            VStack(spacing: 10) {
                 Text("Wave 1")
                 
                 WaveView(data: $power)
@@ -29,7 +29,7 @@ struct HomeView: View {
                 
             
             // Wave 2
-            Group {
+            VStack(spacing: 10) {
                 Text("Wave 2")
                     
                 Wave2View()
@@ -38,7 +38,7 @@ struct HomeView: View {
             }
             
             // Wave 3
-            Group {
+            VStack(spacing: 10) {
                 Text("Wave 3")
                     
                 Wave3View()
@@ -47,7 +47,7 @@ struct HomeView: View {
             }
             
             // Wave 4
-            Group {
+            VStack(spacing: 10) {
                 Text("Wave 4")
                 
                 Wave4View()
