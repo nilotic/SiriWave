@@ -29,7 +29,7 @@ struct Wave4Shape: Shape {
        
         for x in stride(from: 0, to: rect.width + data.density, by: data.density) {
             let scaling = -pow(1 / middle * (x - middle), 2) + 1
-            let y = scaling * maxAmplitude * data.normedAmplitude * sin(2 * .pi * data.frequency * (x / rect.width) + data.phase) + rect.height / 2
+            let y = scaling * maxAmplitude * data.normedAmplitude * sin(2 * .pi * data.frequency * (x / rect.width) + data.time) + rect.height / 2
             
             switch x {
             case 0:     path.move(to: CGPoint(x: x, y: y))

@@ -14,14 +14,14 @@ struct Wave4 {
     let amplitude: CGFloat
     let frequency: CGFloat
     let density: CGFloat
-    var phase: CGFloat
+    var time: CGFloat
 }
 
 extension Wave4: Animatable {
     
     var animatableData: CGFloat {
-        get { phase }
-        set { phase = newValue }
+        get { time }
+        set { time = newValue }
     }
 }
 
