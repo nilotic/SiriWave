@@ -8,10 +8,46 @@
 import SwiftUI
 
 struct Wave4 {
-    var frequency: CGFloat = 1.5
-    var idleAmplitude: CGFloat = 0.01
-    var phaseShift: CGFloat = -0.15
-    var density: CGFloat = 1
-    var amplitude: CGFloat = 1
-    var phase: CGFloat = 0
+    let index: UInt
+    let count: UInt
+    let primaryLineWidth: CGFloat
+    let amplitude: CGFloat
+    let frequency: CGFloat
+    let density: CGFloat
+    var phase: CGFloat
+}
+
+extension Wave4: Animatable {
+    
+    var animatableData: CGFloat {
+        get { phase }
+        set { phase = newValue }
+    }
+}
+
+extension Wave4: Identifiable {
+    
+    var id: UInt {
+        index
+    }
+    
+    var lineWidth: CGFloat {
+        index == 0 ? primaryLineWidth : secondaryLineWidth
+    }
+    
+    var secondaryLineWidth: CGFloat {
+        primaryLineWidth / 3
+    }
+    
+    var progress: CGFloat {
+        1 - CGFloat(index) / CGFloat(count)
+    }
+    
+    var normedAmplitude: CGFloat {
+        (1.5 * progress - 0.8) * amplitude
+    }
+    
+    var opacity: Double {
+        return index == 0 ? 1 : min(1, ((1 - Double(index) / Double(count)) / 6) + 1 / 3)
+    }
 }

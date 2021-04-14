@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B793C2E22626614A00F2C72C /* Wave4Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793C2E12626614A00F2C72C /* Wave4Data.swift */; };
 		B798E3262616A90E002B8C2C /* SiriWave2Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798E3252616A90E002B8C2C /* SiriWave2Shape.swift */; };
 		B7A6946A26131643004AE108 /* SiriWaveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6946926131643004AE108 /* SiriWaveApp.swift */; };
 		B7A6946C26131643004AE108 /* Wave2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6946B26131643004AE108 /* Wave2View.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B793C2E12626614A00F2C72C /* Wave4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave4Data.swift; sourceTree = "<group>"; };
 		B798E3252616A90E002B8C2C /* SiriWave2Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriWave2Shape.swift; sourceTree = "<group>"; };
 		B7A6946626131643004AE108 /* SiriWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A6946926131643004AE108 /* SiriWaveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriWaveApp.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DD42DD2625AAFB00C55CFA /* Wave4View.swift */,
+				B793C2E12626614A00F2C72C /* Wave4Data.swift */,
 				B7DD42E02625B1C100C55CFA /* View */,
 				B7DD42E12625B1C500C55CFA /* Model */,
 			);
@@ -322,6 +325,7 @@
 				B7DD42DE2625AAFB00C55CFA /* Wave4View.swift in Sources */,
 				B7A6946C26131643004AE108 /* Wave2View.swift in Sources */,
 				B7DD42E62625B1EC00C55CFA /* Wave4.swift in Sources */,
+				B793C2E22626614A00F2C72C /* Wave4Data.swift in Sources */,
 				B7A6948626131CAC004AE108 /* SiriWave2.swift in Sources */,
 				B7DD42D5262589F700C55CFA /* Wave3.swift in Sources */,
 				B7C97188261AF42A0042E22D /* WaveData.swift in Sources */,
