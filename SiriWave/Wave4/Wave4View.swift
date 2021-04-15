@@ -11,10 +11,7 @@ struct Wave4View: View {
     
     // MARK: - Value
     // MARK: Private
-    @State private var phase: CGFloat = 0
-    
     @ObservedObject private var data = Wave4Data()
-    
     
     
     // MARK: - View
